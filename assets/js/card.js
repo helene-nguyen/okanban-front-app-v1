@@ -10,7 +10,7 @@ const appCard = {
     //^------------------------------ Methods
     //~fetch all cards
     async fetchAllCards() {
-        const url = `http://192.168.0.9:4100/cards`;
+        const url = `http://localhost:4100/cards`;
         const response = await fetch(url);
 
         if (response.ok) {

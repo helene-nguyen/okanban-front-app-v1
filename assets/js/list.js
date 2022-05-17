@@ -1,7 +1,9 @@
+//~import data
+import { allLists, url } from "./services/api.okanban.js";
+
 const appList = {
     //^------------------------------ Variables
-    URL: 'http://localhost:4100',
-    allList: '/lists',
+
     //^------------------------------ Init
     init() {
         this.createForm();
@@ -10,7 +12,7 @@ const appList = {
     //^------------------------------ Methods
     //~fetch all lists
     async fetchAllLists() {
-        const urlAllList = this.URL + this.allList;
+        const urlAllList = url + allLists;
         const response = await fetch(urlAllList);
 
         console.log(await response.json());
